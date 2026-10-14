@@ -1,0 +1,81 @@
+.string-visualizer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.symbols-container {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1rem;
+  background-color: var(--bg-light);
+  border-radius: 0.5rem;
+}
+
+.symbol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.symbol span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var(--bg-white);
+  border: 2px solid var(--border-color);
+  border-radius: 0.4rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+
+.symbol.x span {
+  background-color: #dbeafe;
+  border-color: #2563eb;
+  color: #1e40af;
+}
+
+.symbol.y span {
+  background-color: #fce7f3;
+  border-color: #ec4899;
+  color: #be185d;
+}
+
+.symbol.z span {
+  background-color: #dcfce7;
+  border-color: #22c55e;
+  color: #15803d;
+}
+
+.symbol-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+.string-length {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .symbols-container {
+    gap: 0.25rem;
+  }
+
+  .symbol span {
+    width: 2rem;
+    height: 2rem;
+    font-size: 0.85rem;
+  }
+}
